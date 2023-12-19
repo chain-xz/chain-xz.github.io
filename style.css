@@ -1,0 +1,117 @@
+body {
+  background-color: #0a0a0a; /* Darker background */
+  color: #e0e0e0; /* Lighter text for better contrast */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin: 20px 0;
+}
+
+.container {
+  flex-basis: 70%;
+  background-color: #1c1c1c; /* Slightly lighter container bg */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  height: auto; /* Adjust height based on content */
+  overflow: auto;
+}
+
+.info-boxes {
+  flex-basis: 27%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-box {
+  background-color: #242424;
+  padding: 25px 20px;
+  border-radius: 8px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.info-box:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.bet-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.bet-box {
+  background-color: #242424;
+  padding: 25px;
+  border-radius: 8px;
+  color: #ffffff;
+  flex: 1 1 calc(20% - 40px); /* Adjust width and gap */
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s; /* Smooth transition for hover effect */
+  min-width: 200px;
+}
+
+.bet-box:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+h1,
+h2 {
+  color: #4caf50; /* Keep the green color for headers */
+  margin: 20px 0; /* Add more space around headers */
+}
+
+code {
+  background-color: #262626;
+  color: #c6c6c6;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "→ ";
+  color: #4caf50;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .main-container,
+  .bet-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container,
+  .info-boxes {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .bet-box {
+    flex-basis: 100%;
+  }
+}
